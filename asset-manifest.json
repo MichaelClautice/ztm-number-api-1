@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/ztm-numbers-api/static/css/main.2dbb8cf1.css",
-    "main.js": "/ztm-numbers-api/static/js/main.560011ea.js",
-    "static/js/787.be05e088.chunk.js": "/ztm-numbers-api/static/js/787.be05e088.chunk.js",
-    "static/media/Arrancar-rgK98.woff": "/ztm-numbers-api/static/media/Arrancar-rgK98.511d91752325334d1c58.woff",
-    "index.html": "/ztm-numbers-api/index.html",
-    "main.2dbb8cf1.css.map": "/ztm-numbers-api/static/css/main.2dbb8cf1.css.map",
-    "main.560011ea.js.map": "/ztm-numbers-api/static/js/main.560011ea.js.map",
-    "787.be05e088.chunk.js.map": "/ztm-numbers-api/static/js/787.be05e088.chunk.js.map"
+    "main.css": "/ztm-number-api/static/css/main.f955c4a2.css",
+    "main.js": "/ztm-number-api/static/js/main.925d0d35.js",
+    "static/js/787.be05e088.chunk.js": "/ztm-number-api/static/js/787.be05e088.chunk.js",
+    "static/media/Arrancar-rgK98.woff": "/ztm-number-api/static/media/Arrancar-rgK98.511d91752325334d1c58.woff",
+    "index.html": "/ztm-number-api/index.html",
+    "main.f955c4a2.css.map": "/ztm-number-api/static/css/main.f955c4a2.css.map",
+    "main.925d0d35.js.map": "/ztm-number-api/static/js/main.925d0d35.js.map",
+    "787.be05e088.chunk.js.map": "/ztm-number-api/static/js/787.be05e088.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2dbb8cf1.css",
-    "static/js/main.560011ea.js"
+    "static/css/main.f955c4a2.css",
+    "static/js/main.925d0d35.js"
   ]
 }
