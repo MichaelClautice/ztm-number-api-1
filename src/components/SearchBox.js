@@ -8,8 +8,8 @@ class SearchBox extends Component{
     <div className='pa2'>
       <input 
         className='pa3 ba b--green bg-lightest-blue'
-        type='search' 
-        placeholder='Search Robo Friends'
+        type='number' 
+        placeholder='Enter a number'
         onChange={this.props.searchChange}
         value={this.props.searchfield} 
       />

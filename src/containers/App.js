@@ -80,8 +80,16 @@ class App extends Component{
 
   componentDidUpdate(prevProps, prevState) {
     if (this.state.number !== prevState.number) {
-      this.fetchNumber(this.state.number);
-    }
+      if(!isNaN(Number(this.state.number))){
+        this.fetchNumber(this.state.number);
+      } 
+      else {
+        this.fetchRandom();
+        this.setState({
+        number: null
+        });
+      }      
+    } 
   }
 
   render(){    
@@ -97,8 +105,8 @@ class App extends Component{
           <h1 className='f1'>{this.props.appName}</h1>
           <SearchBox searchChange={this.handleSearch} searchfield={this.state.searchfield} />
           <div className='pa2'>
-            <input type='button' onClick={this.handleSubmit} value='Get Fact' className='pa2 ma2 br4 b--light-purple bg-green w-10'/>
-            <input type='button' onClick={this.fetchRandom} value='Random Facts' className='pa2 ma2 br4 b--light-purple bg-green w-10'/>
+            <input type='button' onClick={this.handleSubmit} value='Get Fact' className='pa2 ma2 br4 b--light-purple bg-green'/>
+            <input type='button' onClick={this.fetchRandom} value='Random Facts' className='pa2 ma2 br4 b--light-purple bg-green'/>
           </div>
           <ErrorBoundary>
             <CardList 
