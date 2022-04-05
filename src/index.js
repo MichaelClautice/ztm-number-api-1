@@ -16,7 +16,7 @@ ReactDOM.createRoot(
   document.getElementById('root'))
     .render(
       <React.StrictMode>
-        <App />
+        <App appName='Number Facts'/>
       </React.StrictMode>);
 
 // If you want to start measuring performance in your app, pass a function

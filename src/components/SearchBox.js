@@ -11,7 +11,7 @@ class SearchBox extends Component{
         type='search' 
         placeholder='Search Robo Friends'
         onChange={this.props.searchChange}
-        // value={this.props.searchChange} 
+        value={this.props.searchfield} 
       />
     </div>
   );

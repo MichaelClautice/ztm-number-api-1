@@ -6,8 +6,10 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: rgb(207,174,238);
-  background: radial-gradient(circle, rgba(207,174,238,1) 0%, rgba(148,233,190,1) 100%);
+  background: radial-gradient(circle, rgba(184, 51, 106,1) 0%, rgba(114, 109, 168,1) 100%);
 }
+
+
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
