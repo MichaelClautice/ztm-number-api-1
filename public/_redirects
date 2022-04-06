@@ -5,23 +5,5 @@
 
 #redirects to correct directories
 
-/ztm-number-api/favicon.ico /favicon.ico 200
+/ztm-number-api/* /:splat 200
 
-/ztm-number-api/manifest.json /manifest.json 200
-
-/ztm-number-api/static/css/main.f955c4a2.css /static/css/main.f955c4a2.css 200
-
-/ztm-number-api/static/js/main.231a966a.js /static/js/main.231a966a.js 200
-
-/ztm-number-api/static/js/787.be05e088.chunk.js /static/js/787.be05e088.chunk.js 200
-
-
-/ztm-number-api/static/media/Arrancar-rgK98.511d91752325334d1c58.woff /static/media/Arrancar-rgK98.511d91752325334d1c58.woff 200
-
-/ztm-number-api/index.html /index.html 200
-
-/ztm-number-api/static/css/main.f955c4a2.css.map /static/css/main.f955c4a2.css.map 200
-
-/ztm-number-api/static/js/main.231a966a.js.map /static/js/main.231a966a.js.map 200
-
-/ztm-number-api/static/js/787.be05e088.chunk.js.map /static/js/787.be05e088.chunk.js.map 200
