@@ -37,7 +37,7 @@ class App extends Component{
           math: math,
           date: date,
           year: year});
-      } catch(error){
+      } catch(error){ //This is here to correct for http mixing issues during deployment
         const  [trivia, math, date, year] = await Promise.all(parameters
           .map(item => `/api/random/${item}?json`) //Create the urls
           .map(async function(url, index) {
@@ -57,18 +57,32 @@ class App extends Component{
   // Fetch a trivia, math, date and year fact for specific number
   fetchNumber = (number) => { 
     const parameters = ['trivia', 'math', 'date', 'year'];
-    const run = async () => {        
-      const  [trivia, math, date, year] = await Promise.all(parameters
-        .map(item => `http://numbersapi.com/${number}/${item}?json`) //Create the urls
-        .map(async function(url, index) {
-          const response = await fetch(url); // Fetch the urls
-          return response.json();
-        }));
-      await this.setState({
-        trivia: trivia,
-        math: math,
-        date: date,
-        year: year});
+    const run = async () => { 
+      try{       
+        const  [trivia, math, date, year] = await Promise.all(parameters
+          .map(item => `http://numbersapi.com/${number}/${item}?json`) //Create the urls
+          .map(async function(url, index) {
+            const response = await fetch(url); // Fetch the urls
+            return response.json();
+          }));
+        await this.setState({
+          trivia: trivia,
+          math: math,
+          date: date,
+          year: year});
+      } catch(error){ //This is here to correct for http mixing issues during deployment
+          const  [trivia, math, date, year] = await Promise.all(parameters
+          .map(item => `/api/${number}/${item}?json`) //Create the urls
+          .map(async function(url, index) {
+            const response = await fetch(url); // Fetch the urls
+            return response.json();
+          }));
+        await this.setState({
+          trivia: trivia,
+          math: math,
+          date: date,
+          year: year});
+      }
     };
     run();
   }
@@ -97,7 +111,7 @@ class App extends Component{
       if(!isNaN(Number(this.state.number))){
         this.fetchNumber(this.state.number);
       } 
-      else {
+      else { //Semi Back end validation for numbers submitted
         this.fetchRandom();
         this.setState({
         number: null
