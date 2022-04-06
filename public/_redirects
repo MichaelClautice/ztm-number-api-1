@@ -1,6 +1,14 @@
 #/* /index.html 200
 
+#redirect api calls to actual http sources because of mixing error with https
+/api/* http://numbersapi.com/:splat 200
+
 #redirects to correct directories
+
+/ztm-number-api/favicon.ico /favicon.ico 200
+
+/ztm-number-api/manifest.json /manifest.json 200
+
 /ztm-number-api/static/css/main.f955c4a2.css /static/css/main.f955c4a2.css 200
 
 /ztm-number-api/static/js/main.231a966a.js /static/js/main.231a966a.js 200

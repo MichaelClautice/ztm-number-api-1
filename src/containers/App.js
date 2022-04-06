@@ -24,18 +24,32 @@ class App extends Component{
   // Fetch a random trivia, math, date and year fact
   fetchRandom = () => { 
     const parameters = ['trivia', 'math', 'date', 'year'];
-    const run = async () => {        
-      const  [trivia, math, date, year] = await Promise.all(parameters
-        .map(item => `http://numbersapi.com/random/${item}?json`) //Create the urls
-        .map(async function(url, index) {
-          const response = await fetch(url); // Fetch the urls
-          return response.json();
-        }));
-      await this.setState({
-        trivia: trivia,
-        math: math,
-        date: date,
-        year: year});
+    const run = async () => { 
+      try{       
+        const  [trivia, math, date, year] = await Promise.all(parameters
+          .map(item => `http://numbersapi.com/random/${item}?json`) //Create the urls
+          .map(async function(url, index) {
+            const response = await fetch(url); // Fetch the urls
+            return response.json();
+          }));
+        await this.setState({
+          trivia: trivia,
+          math: math,
+          date: date,
+          year: year});
+      } catch(error){
+        const  [trivia, math, date, year] = await Promise.all(parameters
+          .map(item => `/api/random/${item}?json`) //Create the urls
+          .map(async function(url, index) {
+            const response = await fetch(url); // Fetch the urls
+            return response.json();
+          }));
+        await this.setState({
+          trivia: trivia,
+          math: math,
+          date: date,
+          year: year});
+      }
     };
     run();
   }
